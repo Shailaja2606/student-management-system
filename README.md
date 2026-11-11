@@ -27,7 +27,8 @@ The project uses Git and GitHub for version control and AWS EC2 for cloud deploy
 
 ## Installation and Execution
 ### Clone the Repository
-'''bash:
+'''bash
+
 git clone
 https://github.com/Shailaja2606/student-management-system.git
 
