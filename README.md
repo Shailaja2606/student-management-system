@@ -30,7 +30,9 @@ The project uses Git and GitHub for version control and AWS EC2 for cloud deploy
 '''bash:
 git clone
 https://github.com/Shailaja2606/student-management-system.git
+
 cd student-management-system
+
 chmod +x student.sh
 ./student.sh
 '''
