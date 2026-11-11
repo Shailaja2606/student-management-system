@@ -34,6 +34,7 @@ https://github.com/Shailaja2606/student-management-system.git
 cd student-management-system
 
 chmod +x student.sh
+
 ./student.sh
 '''
  
