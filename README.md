@@ -1,37 +1,37 @@
-Student Management System using Linux, Shell Scripting, Git, GitHub and AWS
+Student Management System
+Using Linux, Shell Scripting, Python Flask, Git, GitHub and AWS
 1. Project Overview
-The Student Management System is a student record management project developed using Linux, Bash Shell Scripting, Python Flask, Git, GitHub and AWS EC2.
-The main objective of this project is to simplify the management of student information, attendance records, examination marks and academic performance.
+The Student Management System is a student record management application developed to simplify the management of student information, attendance, examination marks and academic performance.
 The project provides two interfaces:
-Command-Line Interface (CLI): A menu-driven application developed using Bash Shell Scripting.
-Web-Based Interface: A browser-based application developed using Python Flask and hosted on AWS EC2.
-The system uses CSV files for storing and managing student information, attendance and examination results.
+Command-Line Application: Developed using Bash Shell Scripting.
+Web-Based Application: Developed using Python Flask and deployed on AWS EC2.
+Student records are stored and managed using CSV files.
 2. Technologies Used
 Technology
 Purpose
 Ubuntu Linux
-Operating system
+Operating System
 Bash Shell Scripting
-Command-line application
+Command-Line Application
 Python
-Web application programming
+Web Application Programming
 Flask
-Web framework
+Web Framework
 HTML
-Web page structure
+Web Page Structure
 CSS
-Website styling
+Website Styling
 CSV
-Data storage
+Data Storage
 Git
-Version control
+Version Control
 GitHub
-Source code hosting
+Source Code Hosting
 AWS EC2
-Cloud deployment
-3. Project Features
+Cloud Deployment
+🚀 3. Project Features
 A. Command-Line Application
-The Bash Shell Script application provides 13 operations:
+The Bash Shell Script application provides the following 13 operations:
 Add Student
 View All Students
 Search Student
@@ -46,39 +46,41 @@ Calculate Academic Performance
 Generate Complete Student Report
 Exit
 B. Web-Based Application
-The Flask website provides the following modules.
-Student Management
+The Flask web application provides five main sections.
+1. Student Management
 Add new student details.
-Enter student ID, name, gender, course, email and phone number.
+Enter Student ID, Name, Gender, Course, Email and Phone Number.
 View all registered students.
-Search students by ID or name.
+Search students by ID or Name.
 Update student information.
 Delete student records.
-Attendance Management
+2. Attendance Management
 Mark attendance as Present or Absent.
 View attendance records.
 Validate student ID before marking attendance.
 Prevent duplicate attendance for the same student on the same date.
 Delete attendance records.
-Calculate attendance percentage.
-Examination Results
-Enter up to three subjects and their marks in one submission.
-Store subject-wise examination results.
-Validate marks and maximum marks.
+3. Examination Results
+Enter up to three subjects in one submission.
+Enter marks obtained and maximum marks.
+Validate marks.
 Prevent duplicate subject entries for the same student.
 View examination records.
 Delete examination records.
-Individual Student Reports
-Search reports using Student ID.
+4. Individual Student Reports
+Search for a student using Student ID.
 Display the selected student's personal details.
-Display gender and course information.
-Display subject-wise examination marks.
-Calculate total marks obtained.
-Calculate overall percentage.
+Display Gender and Course.
+Show subject-wise examination marks.
+Calculate total marks and percentage.
 Display academic grade and pass/fail result.
-Display attendance summary and attendance percentage.
-Print the individual student marksheet.
-4. Project Structure
+Display attendance summary and percentage.
+Print the student's individual marksheet.
+5. Academic Performance
+Calculate overall academic percentage.
+Assign grades based on percentage.
+Determine pass/fail status using the configured rules.
+📂 4. Project Structure
 student-management-system/
 │
 ├── student.sh
@@ -90,73 +92,62 @@ student-management-system/
 │
 └── website/
     ├── app.py
-    ├── venv/
-    └── app_backup*.py
-Note: Backup files and the Python virtual environment are local development files and should not be uploaded to GitHub.
-5. CSV Data Storage
-The application uses three CSV files.
+    └── requirements.txt
+Note: CSV files contain application data and are excluded from the public repository. The Python virtual environment and backup files are also excluded.
+💾 5. CSV Data Storage
+The project uses three CSV files.
+File
+Description
 students.csv
-Stores:
-Student ID
-Name
-Gender
-Course
-Email
-Phone Number
+Stores student personal details, including Gender
 attendance.csv
-Stores:
-Student ID
-Date
-Attendance Status
+Stores student attendance records
 results.csv
-Stores:
-Student ID
-Subject
-Marks Obtained
-Maximum Marks
-6. How to Run the Shell Script Application
-Clone the repository:
+Stores subject-wise examination marks
+💻 6. Running the Command-Line Application
+Step 1: Clone the repository
 git clone https://github.com/Shailaja2606/student-management-system.git
-Navigate to the project directory:
+Step 2: Navigate to the project directory
 cd student-management-system
-Give execution permission:
+Step 3: Give execution permission
 chmod +x student.sh
-Run the application:
+Step 4: Run the application
 ./student.sh
-Create the required CSV files with the appropriate column headers if they do not already exist.
-7. How to Run the Flask Web Application
-Navigate to the website directory:
+Create the required CSV files with the appropriate headers if they do not already exist.
+🌐 7. Running the Web Application
+Step 1: Navigate to the website directory
 cd website
-Create a Python virtual environment:
+Step 2: Create a virtual environment
 python3 -m venv venv
-Activate the virtual environment:
+Step 3: Activate the virtual environment
 source venv/bin/activate
-Install Flask:
+Step 4: Install Flask
 pip install flask
-Run the application:
+Step 5: Run the application
 python app.py
-Open a web browser and visit:
+Step 6: Open the website
+Visit the following address in your browser:
 http://localhost:5000
-8. AWS EC2 Deployment
+☁️ 8. AWS EC2 Deployment
 The Flask web application was deployed on an AWS EC2 Ubuntu instance.
-Deployment process:
+Deployment Steps
 Created an AWS EC2 instance.
 Selected Ubuntu as the operating system.
-Connected to the instance using EC2 Instance Connect.
+Connected using EC2 Instance Connect.
 Installed Python and the required packages.
-Cloned the project repository from GitHub.
+Cloned the project from GitHub.
 Created and activated a Python virtual environment.
 Installed Flask.
 Started the Flask application.
-Configured the required network access.
-Accessed the website through the EC2 public IP address and port 5000.
-Example URL:
+Configured network access to the application.
+Accessed the website using the EC2 public IP address.
+Website URL format:
 http://YOUR-EC2-PUBLIC-IP:5000
-The EC2 instance must be running for the website to be accessible.
-9. Academic Performance Calculation
+The EC2 instance must be running, and the required network access must be configured.
+📊 9. Academic Performance Calculation
 The overall academic percentage is calculated using:
-Percentage = (Total Marks Obtained / Total Maximum Marks) * 100
-Example:
+Percentage = (Total Marks Obtained / Total Maximum Marks) × 100
+Example
 Subject
 Marks Obtained
 Maximum Marks
@@ -172,58 +163,56 @@ Computer
 Total
 245
 300
-Overall percentage:
-(245 / 300) * 100 = 81.67%
-The demonstration application uses the following grade ranges:
+Overall Percentage:
+(245 / 300) × 100 = 81.67%
+Grade Classification
 Percentage
 Grade
 75% and above
 Distinction
-60% to below 75%
+60% – below 75%
 First Class
-50% to below 60%
+50% – below 60%
 Second Class
-40% to below 50%
+40% – below 50%
 Pass
 Below 40%
 Fail
-The demonstration pass rule also requires at least 40% in each subject. These rules can be modified according to institutional requirements.
-10. Testing
-The following operations were tested:
-Adding and viewing student details.
-Searching and updating student records.
-Deleting student records.
-Entering student gender.
-Marking and viewing attendance.
-Validating registered student IDs.
-Entering multiple subject marks.
-Calculating academic percentages.
-Generating individual student marksheets.
-Displaying attendance summaries.
-Running the Flask application on AWS EC2.
-11. Learning Outcomes
-This project helped develop practical knowledge of:
+These are the demonstration application's grading rules. The pass rule also requires at least 40% in each subject.
+🧪 10. Testing
+The following functionalities were tested:
+Student registration and record management.
+Student search, update and deletion.
+Gender entry and display.
+Attendance marking and calculation.
+Examination result entry for multiple subjects.
+Academic percentage and grade calculation.
+Individual student report generation.
+Attendance summary in student reports.
+Flask website deployment on AWS EC2.
+🎯 11. Learning Outcomes
+Through this project, practical knowledge was gained in:
 Linux commands and file management.
 Bash Shell Scripting.
-Python programming.
-Flask web application development.
+Python and Flask development.
 HTML and CSS.
 CSV file handling.
-Git and GitHub version control.
+Git and GitHub.
 AWS EC2 cloud deployment.
 Basic web hosting and server configuration.
-12. Future Enhancements
-Secure login and authentication.
-Database integration using MySQL or PostgreSQL.
+🔮 12. Future Enhancements
+User authentication and secure login.
+MySQL or PostgreSQL database integration.
 Administrator and teacher roles.
 PDF marksheet downloads.
-Improved dashboard and charts.
-More advanced student performance analysis.
+Dashboard with charts and statistics.
+Advanced academic performance analysis.
 Production-ready web hosting and security.
-13. Conclusion
-The Student Management System demonstrates the practical use of Linux, Shell Scripting, Python, Flask, Git, GitHub and AWS.
-It provides both command-line and web-based interfaces for managing student details, attendance, examination results and academic reports.
-The project demonstrates how a student management application can be developed, maintained using version control and deployed on a cloud server.
+🏁 13. Conclusion
+The Student Management System demonstrates the practical implementation of Linux, Shell Scripting, Python, Flask, Git, GitHub and AWS.
+It provides both command-line and web-based interfaces to manage student details, attendance, examination results and individual academic reports.
+The project demonstrates the development, version control and cloud deployment of a student management application.
+👩‍💻 Project Information
 Project Name: Student Management System
 Technologies: Linux, Bash, Python, Flask, HTML, CSS, Git, GitHub and AWS EC2.
-GitHub Repository: https://github.com/Shailaja2606/student-management-system
+GitHub Repository: Student Management System
